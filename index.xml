@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>swwang</title>
+    <link>https://codenotesll.github.io/</link>
+    <description>Recent content on swwang</description>
+    <image>
+      <title>swwang</title>
+      <url>https://codenotesll.github.io/papermod-cover.png</url>
+      <link>https://codenotesll.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 May 2023 09:58:30 +0800</lastBuildDate><atom:link href="https://codenotesll.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biji</title>
+      <link>https://codenotesll.github.io/posts/%E8%99%9A%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/</link>
+      <pubDate>Sat, 06 May 2023 09:58:30 +0800</pubDate>
+      
+      <guid>https://codenotesll.github.io/posts/%E8%99%9A%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB/</guid>
+      <description>虚析构函数、纯虚函数和抽象类 虚析构函数 基类指针指向了一个new出来的派生类，delete基类指针只会调用基类析构函数，而不会调用派生类构造函数，如
+class son{ public: ~son(){ cout &amp;lt;&amp;lt; &amp;#34;son::destructor&amp;#34; &amp;lt;&amp;lt; endl; } }; class grandson:public son{ public: ~grandson(){ cout &amp;lt;&amp;lt; &amp;#34;grandson::destructor&amp;#34; &amp;lt;&amp;lt; endl; } }; int main (){ son* pSon = new grandson; delete pSon; } // 输出 son::destructor 解决方法是将基类析构函数声明为虚函数；
+class son{ public: virtual ~son(){ cout &amp;lt;&amp;lt; &amp;#34;son::destructor&amp;#34; &amp;lt;&amp;lt; endl; } }; class grandson:public son{ public: ~grandson(){ cout &amp;lt;&amp;lt; &amp;#34;grandson::destructor&amp;#34; &amp;lt;&amp;lt; endl; } }; int main (){ son* pSon = new grandson; delete pSon; } // grandson::destructor // son::destructor 基类的析构函数声明为虚函数，那么派生类析构函数默认为虚函数；</description>
+    </item>
+    
+    <item>
+      <title>Second</title>
+      <link>https://codenotesll.github.io/posts/second/</link>
+      <pubDate>Sat, 06 May 2023 09:54:12 +0800</pubDate>
+      
+      <guid>https://codenotesll.github.io/posts/second/</guid>
+      <description>second md test</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://codenotesll.github.io/posts/test/</link>
+      <pubDate>Sat, 06 May 2023 09:53:13 +0800</pubDate>
+      
+      <guid>https://codenotesll.github.io/posts/test/</guid>
+      <description>test hugo</description>
+    </item>
+    
+  </channel>
+</rss>
